@@ -25,7 +25,7 @@ hbs.registerHelper('getCurrentYear', () => new Date().getFullYear())
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
-    pageTitle: 'Abot Page',
+    pageTitle: 'Home Page',
     currentYear: new Date().getFullYear(),
     welcomeMsg: 'Hello Yobana'
   })
@@ -33,8 +33,14 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
-    pageTitle: 'Abot Page',
+    pageTitle: 'About Page',
     currentYear: new Date().getFullYear()
+  })
+})
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page'
   })
 })
 
